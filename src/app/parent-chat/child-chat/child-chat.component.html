@@ -1,0 +1,11 @@
+<div class="phone">
+  <p>Phone 2</p>
+  <input #input type="text" />
+  <button (click)="sendMessage(input.value)">enviar</button>
+  <!-- <p *ngIf="text">Phone 1 says: {{ text }}</p> -->
+  <ul>
+    <li *ngFor="let item of arrayText">
+      <p>{{ item }}</p>
+    </li>
+  </ul>
+</div>

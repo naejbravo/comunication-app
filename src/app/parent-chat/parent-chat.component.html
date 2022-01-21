@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="phone">
+    <p>Phone 1</p>
+    <input #input type="text" />
+    <button (click)="sendMessage(input.value)">enviar</button>
+    <!-- <p *ngIf="sonText">Phone 2 says: {{ sonText }}</p> -->
+    <ul>
+      <li *ngFor="let item of arrayPhone2">
+        <p>{{ item }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <app-child-chat
+    [text]="text"
+    [arrayText]="arrayText"
+    (emitMessage)="getMessage($event)"
+    (emitArray)="getArray($event)"
+  ></app-child-chat>
+</div>
